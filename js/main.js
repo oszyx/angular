@@ -8,6 +8,9 @@ angular.module('app').controller('AppCtrl', ['$scope', '$translate', '$localStor
         isIE && angular.element($window.document.body).addClass('ie');
         isSmartDevice( $window ) && angular.element($window.document.body).addClass('smart');
         $scope.app = {name: '信息管理系统', version: '1.0.0'}
+    $scope.resetPassword = function (){
+        alert("模块还在开发中，请等待....");
+    }
     function isSmartDevice( $window )
         {
             var ua = $window['navigator']['userAgent'] || $window['navigator']['vendor'] || $window['opera'];
