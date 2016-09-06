@@ -1,0 +1,13 @@
+<div id="login" class="div_login align_layout"  ng-controller="SigninFormController">
+    <div class="align_layout width_layout" style="height: 66px;line-height: 66px;">{{app.name}}</div>
+    <form name="form">
+        <div  class="align_layout width_layout"  style="height: 200px;line-height: 50px;">
+            用户名<input type="email" placeholder="Email" style="margin-top: 80px;"  ng-model="user.email" required><br>
+            密&nbsp;&nbsp;&nbsp;&nbsp;码<input type="password" placeholder="Password" ng-model="user.password" required><br>
+        </div>
+        <div  class="align_layout width_layout"  style="height: 37px;line-height: 37px;">
+            <button type="submit" style="margin-left: 15px; background-color:transparent; border: 0px;"  ng-disabled='form.$invalid' ng-click="login()">登录</button>
+            <button type="reset" style=" margin-left: -5px;background-color:transparent; border: 0px;" ng-click="reset()">重置</button>
+        </div>
+    </form>
+</div>
