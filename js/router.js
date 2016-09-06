@@ -14,7 +14,7 @@ angular.module('app')
     .config(
         ['$stateProvider', '$urlRouterProvider',
             function ($stateProvider,   $urlRouterProvider) {
-                $urlRouterProvider.otherwise('/access/content');
+                $urlRouterProvider.otherwise('/access/signin');
                 $stateProvider.state('access', {
                     url: '/access',
                     template: '<div ui-view></div>'})
@@ -27,10 +27,6 @@ angular.module('app')
                                 return uiLoad.load( ['js/controllers/signin.js'] );
                             }]
                     }
-                })
-                .state('access.content', {
-                    url: '/content',
-                    templateUrl: 'tpl/page_content.html'
                 })
             }
         ]
